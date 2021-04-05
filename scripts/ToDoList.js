@@ -17,15 +17,34 @@ class ToDoList{
     }
 
     display(){
-        for(var i = 0; i < this.htmlListElements.length; i++){
+        //clear list
+        for(let i = 0; i < this.htmlListElements.length; i++){ //use let as it is kinda private and the the value of it is used in the add event section and not "i" as a reference...
             this.htmlListElements[i].remove()
         }
 
-        for (var i = 0; i < this.list.length; i++) {
-            var para = document.createElement("p")
-            para.appendChild(document.createTextNode(this.list[i]))            
-            listElement.appendChild(para)
-            this.htmlListElements.push(para)
+        //display current List
+        for (let i = 0; i < this.list.length; i++) {    //use let as it is kinda private and the the value of it is used in the add event section and not "i" as a reference...
+            var div = document.createElement("div")
+            //text
+            var text = document.createElement("p")            
+            text.appendChild(document.createTextNode(this.list[i])) 
+            div.appendChild(text)          
+            
+            //delete button
+            var button = document.createElement("button")
+            button.appendChild(document.createTextNode("done"))
+            button.addEventListener('click', button => {
+                this.htmlListElements.splice(i,1)
+                this.list.splice(i,1)
+                this.debug()
+                div.remove()
+                this.display()
+            })
+
+            div.appendChild(button)
+
+            listElement.appendChild(div)
+            this.htmlListElements.push(div)
         }
     }
 
