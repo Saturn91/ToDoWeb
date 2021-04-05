@@ -1,0 +1,27 @@
+/*everything*/
+*, *::before, *::after {
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+ }
+
+ .width-70 {
+    width:80%;
+    min-width: 400px;
+    text-align: center;
+}
+
+.width-70 .input-text{
+    height: 50px;
+    width: 75%;
+    min-width: 300px;
+    font-size: 1.5rem;
+}
+
+.width-70 .submit-btn {
+    width: 15%;
+    min-width: 200px;
+    height: 50px;
+}
