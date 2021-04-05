@@ -25,3 +25,29 @@
     min-width: 200px;
     height: 50px;
 }
+
+
+
+.todo-list{
+    width: 80%;
+}
+
+.list-item{
+    list-style: none;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.todo-list .list-item .text{
+    display: inline-block;
+    width: 20%;
+}
+
+.todo-list .list-item .btn{
+    display: inline-block;
+    width: 5%;
+}
